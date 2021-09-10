@@ -12,56 +12,13 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
 
     <style>
-      @font-face {
-        font-family: "UhBeemysen";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff")
-          format("woff");
-        font-weight: normal;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: "Middleschool_student";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_08@1.0/Middleschool_student.woff")
-          format("woff");
-        font-weight: normal;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: "Uiyeun";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105@1.1/Uiyeun.woff")
-          format("woff");
-        font-weight: normal;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: "LeeHyunJi";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/LeeHyunJi.woff")
-          format("woff");
-        font-weight: normal;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: "SlowSlow";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_10@1.0/SlowSlow.woff")
-          format("woff");
-        font-weight: normal;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: "Pretty_Left_handed";
-        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_09@1.0/Pretty_Left_handed.woff")
-          format("woff");
-        font-weight: normal;
-        font-style: normal;
-      }
-
       * {
         box-sizing: border-box;
       }
 
       html {
         font-size: 18px;
-        font-family: "", sans-serif;
+        font-family: sans-serif;
       }
 
       body {
@@ -81,6 +38,7 @@
         margin: 0;
         padding: 0;
       }
+
       a {
         color: #74c0fc;
       }
@@ -194,9 +152,6 @@
         background-size: contain;
       }
       .list li a:hover:before {
-        -webkit-animation: spin 500ms infinite linear;
-        -moz-animation: spin 500ms infinite linear;
-        -ms-animation: spin 500ms infinite linear;
         animation: spin 500ms infinite linear;
       }
 
@@ -227,21 +182,6 @@
         }
       }
 
-      @-webkit-keyframes spin {
-        100% {
-          -webkit-transform: rotate(360deg);
-        }
-      }
-      @-moz-keyframes spin {
-        100% {
-          -moz-transform: rotate(360deg);
-        }
-      }
-      @-ms-keyframes spin {
-        100% {
-          -ms-transform: rotate(360deg);
-        }
-      }
       @keyframes spin {
         100% {
           transform: rotate(360deg);
