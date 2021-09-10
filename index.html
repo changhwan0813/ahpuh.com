@@ -2,7 +2,13 @@
   <head>
     <title>어푸 (Ah puh) · IU</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="어푸 (Ah puh) 가사와 함께 무제한으로 즐기기!" />
+    <meta
+      name="description"
+      content="어푸 (Ah puh) 가사와 함께 무제한으로 즐기기!"
+    />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+
     <style>
       @font-face {
         font-family: "UhBeemysen";
@@ -40,8 +46,9 @@
         font-style: normal;
       }
       @font-face {
-        font-family: 'Pretty_Left_handed';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_09@1.0/Pretty_Left_handed.woff') format('woff');
+        font-family: "Pretty_Left_handed";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_09@1.0/Pretty_Left_handed.woff")
+          format("woff");
         font-weight: normal;
         font-style: normal;
       }
@@ -71,6 +78,12 @@
         font-size: inherit;
         margin: 0;
         padding: 0;
+      }
+      a {
+        color: #74c0fc;
+      }
+      a:hover {
+        text-decoration: none;
       }
 
       .container {
@@ -115,7 +128,7 @@
         margin: 0 0 1em 0;
       }
 
-     .wave {
+      .wave {
         color: #339af0;
         font-weight: bold;
       }
@@ -131,6 +144,7 @@
       }
 
       .video-wrapper {
+        order: 0;
         position: relative;
         max-width: 400px;
         max-height: 400px;
@@ -151,6 +165,45 @@
         width: 100%;
         height: 100%;
       }
+      .list {
+        width: 100%;
+        padding: 0 2em;
+      }
+      .list ul {
+        margin: 0;
+        padding: 0;
+      }
+      .list li {
+        list-style: none;
+        margin: 0 0 0.2rem;
+        padding: 0 0 0 1.2rem;
+      }
+      .list li a {
+        position: relative;
+      }
+      .list li a:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -1.2rem;
+        top: 0;
+        width: 1rem;
+        height: 1rem;
+        background-size: contain;
+      }
+      .list li a:hover:before {
+        -webkit-animation: spin 500ms infinite linear;
+        -moz-animation: spin 500ms infinite linear;
+        -ms-animation: spin 500ms infinite linear;
+        animation: spin 500ms infinite linear;
+      }
+
+      .surfing:before {
+        background-image: url("./surfing.svg");
+      }
+      .swim:before {
+        background-image: url("./swim.svg");
+      }
 
       @media only screen and (min-width: 600px) {
         .container {
@@ -158,23 +211,38 @@
           align-items: start;
         }
         .main {
-
-        }
-        .header {
-          
-        }
-        .video-wrapper {
-          order: 0;
-          flex-grow: 1;
           max-width: 50%;
         }
-        .lyrics {
+        .video-wrapper {
+          flex-grow: 1;
+          max-width: 50%;
         }
         .video {
           max-width: calc(min(50vw, 100vh) - 4rem);
           padding-bottom: calc(min(50vw, 100vh) - 4rem);
           position: fixed;
           right: calc(50% + 2rem);
+        }
+      }
+
+      @-webkit-keyframes spin {
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+      @-moz-keyframes spin {
+        100% {
+          -moz-transform: rotate(360deg);
+        }
+      }
+      @-ms-keyframes spin {
+        100% {
+          -ms-transform: rotate(360deg);
+        }
+      }
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
         }
       }
     </style>
@@ -262,26 +330,39 @@
         </div>
         <div class="list">
           <ul>
-            <li><a href="https://youtu.be/7n9D8ZeOQv0">어푸 (Ah puh)</a></li>
-            <li><a href="https://youtu.be/L1vjymW7eNg?t=1556">[아이유의 팔레트] 팔레트에서 지겹게 보자고 (With 아이유) Ep.7</a></li>
-
+            <li>
+              <a href="https://youtu.be/7n9D8ZeOQv0" class="surfing"
+                >어푸 (Ah puh)</a
+              >
+            </li>
+            <li>
+              <a href="https://youtu.be/L1vjymW7eNg?t=1556" class="surfing"
+                >[아이유의 팔레트] 팔레트에서 지겹게 보자고 (With 아이유)
+                Ep.7</a
+              >
+            </li>
           </ul>
         </div>
         <div class="footer">
           <p>어푸 (Ah puh) 가사와 함께 무제한으로 즐기기!</p>
+          <p>
+            All icons by
+            <a href="https://thenounproject.com/ayub12">Ayub Irawan</a> from
+            <a href="https://thenounproject.com">the Noun Project</a>.
+          </p>
         </div>
       </div>
       <div class="video-wrapper">
-          <div class="video">
-            <iframe
-              id="ytplayer"
-              type="text/html"
-              src="https://www.youtube.com/embed/7n9D8ZeOQv0?autoplay=1&loop=1&modestbranding=1&playsinline=1"
-              frameborder="0"
-              allowfullscreen
-              allow="autoplay"
-            ></iframe>
-          </div>
+        <div class="video">
+          <iframe
+            id="ytplayer"
+            type="text/html"
+            src="https://www.youtube.com/embed/7n9D8ZeOQv0?autoplay=1&loop=1&modestbranding=1&playsinline=1"
+            frameborder="0"
+            allowfullscreen
+            allow="autoplay"
+          ></iframe>
+        </div>
       </div>
     </div>
   </body>
